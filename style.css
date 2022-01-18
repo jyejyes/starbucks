@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:wght@300&family=Noto+Sans+KR&display=swap');
+
+:root{
+    /* color */
+    --black-color: rgb(34, 34, 34);
+    --white-color: rgb(243, 243, 243);
+    --green-color: rgb(41, 156, 91);
+
+    /* font size */
+    --Xlarge-font: 55px;
+    --medium-font: 20px;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background-color: var(--white-color);
+}
+
+ul{
+    list-style: none;
+}
+
+header{
+    display: flex;
+    padding: 2% 8%;
+    position: sticky;
+    top:0;
+    z-index: 10;
+    background-color: var(--white-color);
+}
+
+header .logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+header .menu{
+    margin-left: 100px;
+}
+
+header .menu ul{
+    display: flex;
+}
+
+header .menu li{
+    margin-right: 50px;
+    font-family: 'Karla', sans-serif;
+}
+
+.first-page{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+.first-page .main-pic{
+    display: flex;
+    width: 73vw;
+    min-width: 800px;
+    position: relative;
+    left: 20vw;
+    box-shadow: -5px 5px 20px 0px rgb(163, 163, 163);
+}
+
+.first-page .left-text{
+    position: absolute;
+    margin-top: 10%;
+    left: 8%;
+    z-index: 1;
+    font-family: 'Karla', sans-serif;
+}
+
+.first-page .left-text .bg-text{
+    font-family: 'Abril Fatface', cursive;
+    font-size: var(--Xlarge-font);
+    color: var(--green-color);
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+.first-page .left-text .sm-text{
+    background-color:rgba(41,156,91,0.9);
+    color: var(--white-color);
+    font-size: var(--medium-font);
+    width:fit-content;
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+.first-page .left-text .micro-text{
+    background-color: rgba(83, 83, 83, 0.9);
+    opacity: 0.9;
+    margin-top: 10px;
+    padding: 3px 6px;
+    color: var(--white-color);
+    width: fit-content;
+    
+}
+
+
+
+
+
+
+
+
+@keyframes apper{
+    from{
+        margin-left: -300px;
+        opacity: 0;
+    }
+    to{
+        margin-left: 80px;
+        opacity: 1;
+    }
+}
+
+@keyframes disapper{
+    from{
+        margin-left: 80px;
+        opacity: 1;
+    }
+    to{
+        margin-left: -300px;
+        opacity: 0;
+    }
+}
