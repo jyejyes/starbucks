@@ -8,6 +8,7 @@
 
     /* font size */
     --Xlarge-font: 55px;
+    --large-font: 40px;
     --medium-font: 20px;
     --small-font: 15px;
 }
@@ -20,6 +21,10 @@ body{
 
 ul{
     list-style: none;
+}
+
+p{
+    margin:0px;
 }
 
 header{
@@ -55,7 +60,7 @@ header .menu li{
     flex-wrap: wrap;
     width: 100vw;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 
 }
 .first-page .main-pic{
@@ -104,22 +109,88 @@ header .menu li{
     border-radius: 5px;
 }
 
+.second-page{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:50px;
+}
+
+.second-page .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.second-page .connect{
+    font-size: var(--Xlarge-font);
+    color: var(--green-color);
+}
+
+.second-page .second-title{
+    font-size: var(--large-font);
+    font-family: 'Abril Fatface', cursive;
+}
+
+.second-page .second-subtitle{
+    font-size: var(--small-font);
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 50px;
+}
+
+.second-page .new-menus{
+    display: flex;
+    align-items: flex-end;
+    margin-left: 40px;
+}
+
+.second-page .menu img
+{
+    display: flex;
+    width: 17vw;
+    min-width: 200px;
+    margin: 30px 6vw;
+}
+
+.second-page .menu .eng-name{
+    font-family: 'Abril Fatface', cursive;
+    font-size: var(--medium-font);
+    display: flex;
+    justify-content: center;
+    margin-left: -25px; 
+    /* 손잡이가 오른쪽에 달려서 중앙처럼 안보이는 문제 해결을 위해 - px 주었음 */
+}
+
+.second-page .menu .kor-name{
+    font-size: var(--small-font);
+    font-family: 'Noto Sans KR', sans-serif;
+    color: var(--green-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -40px; 
+}
 
 
 
 
-@keyframes apper{
+
+
+/* 스크롤 시 나타나기 */
+@keyframes appear{
     from{
-        margin-left: -300px;
+        left: -30%;
         opacity: 0;
     }
     to{
-        margin-left: 80px;
+        left: 8%;
         opacity: 1;
     }
 }
 
-@keyframes disapper{
+/* 스크롤시 사라지기 */
+@keyframes disappear{
     from{
         margin-left: 80px;
         opacity: 1;
@@ -127,5 +198,23 @@ header .menu li{
     to{
         margin-left: -300px;
         opacity: 0;
+    }
+}
+
+@keyframes menus-appear{
+    from{
+        margin-left: -1500px;
+    }
+    to{
+        margin-left: 40px;
+    }
+}
+
+@keyframes menus-disappear{
+    from{
+        margin-left: 40px;
+    }
+    to{
+        margin-left: -1500px;
     }
 }
